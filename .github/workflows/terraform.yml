@@ -42,21 +42,21 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: ToDo-App
+        working-directory: eksDeploy
 
       - name: Terraform Plan
         run: terraform plan -var="cluster_name=${{ github.event.inputs.cluster_name }}"
-        working-directory: ToDo-App
+        working-directory: eksDeploy
 
       - name: Terraform Apply
         if: github.event.inputs.action == 'apply'
         run: terraform apply --auto-approve -var="cluster_name=${{ github.event.inputs.cluster_name }}"
-        working-directory: ToDo-App
+        working-directory: eksDeploy
 
       - name: Terraform Destroy
         if: github.event.inputs.action == 'destroy'
         run: terraform destroy --auto-approve -var="cluster_name=${{ github.event.inputs.cluster_name }}"
-        working-directory: ToDo-App
+        working-directory: eksDeploy
 
   argocd:
     if: github.event.inputs.job == 'argocd' || github.event.inputs.job == 'all'
