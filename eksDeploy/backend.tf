@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "devops-tetris-project"
+    bucket = "demovansh"
     key    = "backend/ToDo-App.tfstate"
     region = "ap-south-1"
-    dynamodb_table = "dynamodb-state-locking"
+    dynamodb_table = "vansh-table"
   }
 }
