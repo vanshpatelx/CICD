@@ -23,7 +23,7 @@ jobs:
   terraform:
     if: github.event.inputs.job == 'terraform' || github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
-    environment: probo
+    environment: test
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
   argocd:
     if: github.event.inputs.job == 'argocd' || github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
-    environment: probo
+    environment: test
     needs: terraform
     steps:
       - name: Configure AWS Credentials
@@ -97,7 +97,7 @@ jobs:
   monitoring:
     if: github.event.inputs.job == 'monitoring' || github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
-    environment: probo
+    environment: test
     needs: terraform
     steps:  
       - name: Configure AWS Credentials
