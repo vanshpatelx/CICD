@@ -66,7 +66,7 @@ jobs:
       - name: Deploy ArgoCD
         run: |
           kubectl create namespace argocd || true
-          kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml
+          kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
           kubectl get pods -n argocd
 
       - name: Expose ArgoCD Server
