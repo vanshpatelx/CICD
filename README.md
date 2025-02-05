@@ -15,7 +15,7 @@ The CI/CD process consists of three key parts:
    - Prometheus & Grafana for metrics collection and visualization.
 
 ## 📸 CI Pipeline Workflow
-![CI Pipeline Overview](https://github.com/vanshpatelx/DevSecOps/blob/main/src/overview.png)
+![CI Pipeline Overview](https://github.com/vanshpatelx/CICD/blob/main/image/whole.png)
 
 ---
 
@@ -26,7 +26,7 @@ The architecture consists of:
 - **Monitoring Stack**: Prometheus, Grafana.
 
 ### Cluster Architecture Diagram:
-![EKS Cluster Architecture](<Your Image URL Here>)
+![EKS Cluster Architecture](https://github.com/vanshpatelx/CICD/blob/main/image/aws.png)
 
 ## 🛠 Technologies Used
 - **Terraform** – Infrastructure provisioning.
